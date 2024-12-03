@@ -17,7 +17,7 @@ const automatedOAuth2 = async (url: string) => {
   await page.click('#identifierNext');
 
   const passwordInputSelector = 'input[type="password"]';
-  const passwordInputText = 'ChangeYourMindCYM2022';
+  const passwordInputText = '';
 
   await page.waitForFunction(
     (passwordInputSelector, text) => {
@@ -31,7 +31,7 @@ const automatedOAuth2 = async (url: string) => {
 
   await page.type('input[type="password"]',passwordInputText)
   await page.click('#passwordNext')
-  
+
   await page.waitForFunction(
     () => {
       const button = document.querySelector('#submit_approve_access') as HTMLButtonElement;
